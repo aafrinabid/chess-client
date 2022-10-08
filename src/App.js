@@ -34,7 +34,7 @@ function App() {
   
     
   return (
-    <div style= {{paddingRight:'200px',paddingLeft:'563px',paddingTop:'50px'}}>
+    <div style= {{paddingRight:'200px',paddingLeft:'563px',paddingTop:'192px',paddingBottom:'96px',background:'brown'}}>
     <div  style={{   width: '400px',
       height: '400px'
    }}>
