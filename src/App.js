@@ -10,7 +10,7 @@ function App() {
     const findPossiblemoves=(i)=>{
       console.log(i)
       setCurrentKnight(i)
-      axios.post('http://localhost:4000/getmoves',i).then(res=>{
+      axios.post('https://chess-knight-server.herokuapp.com/getmoves',i).then(res=>{
        setPossibleMoves([...res.data])
       })
     }
