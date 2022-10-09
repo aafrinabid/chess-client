@@ -34,9 +34,11 @@ function App() {
   
     
   return (
-    <div style= {{paddingRight:'200px',paddingLeft:'563px',paddingTop:'192px',paddingBottom:'96px',background:'brown'}}>
+    <div style= {{paddingRight:'200px',paddingLeft:'563px',paddingTop:'40px',paddingBottom:'96px',background:'brown'}}>
+    <h1 style={{width:'50%'}}>Find out All positon where knight can move by clicking any square?</h1>
     <div  style={{   width: '400px',
-      height: '400px'
+      height: '400px',
+      border:'black solid 5px'
    }}>
 {list}
     </div>
