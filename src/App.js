@@ -6,9 +6,7 @@ function App() {
   const list=[]
   const[ currentKnight,setCurrentKnight]=useState({})
   const [possibleMoves,setPossibleMoves]=useState([])
-  console.log(currentKnight)
     const findPossiblemoves=(i)=>{
-      console.log(i)
       setCurrentKnight(i)
       axios.post('https://chess-knight-server.herokuapp.com/getmoves',i).then(res=>{
        setPossibleMoves([...res.data])
