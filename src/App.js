@@ -6,7 +6,7 @@ function App() {
   const list=[]
   const[ currentKnight,setCurrentKnight]=useState({})
   const [possibleMoves,setPossibleMoves]=useState([])
-  const [fetchState,setFetchState]=useState([])
+  const [fetchState,setFetchState]=useState(false)
     const findPossiblemoves=(i)=>{
       setCurrentKnight(i)
       setFetchState(true)
