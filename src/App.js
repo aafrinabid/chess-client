@@ -6,10 +6,13 @@ function App() {
   const list=[]
   const[ currentKnight,setCurrentKnight]=useState({})
   const [possibleMoves,setPossibleMoves]=useState([])
+  const [fetchState,setFetchState]=useState([])
     const findPossiblemoves=(i)=>{
       setCurrentKnight(i)
+      setFetchState(true)
       axios.post('https://chess-knight-server.herokuapp.com/getmoves',i).then(res=>{
        setPossibleMoves([...res.data])
+       setFetchState(false)
       })
     }
     const checkIfPossible=(i,j)=>{
@@ -34,6 +37,7 @@ function App() {
   return (
     <div style= {{paddingRight:'200px',paddingLeft:'563px',paddingTop:'40px',paddingBottom:'96px',background:'brown'}}>
     <h1 style={{width:'50%'}}>Find out All positon where knight can move by clicking any square?</h1>
+    {fetchState && <h1>fetching all possible moves</h1>}
     <div  style={{   width: '400px',
       height: '400px',
       border:'black solid 5px'
